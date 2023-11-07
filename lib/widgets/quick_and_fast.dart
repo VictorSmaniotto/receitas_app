@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/models/food.dart';
+import 'package:food_app/screens/quick_foods_screen.dart';
 import 'package:iconsax/iconsax.dart';
 
 class QuickAndFastList extends StatelessWidget {
@@ -22,7 +23,12 @@ class QuickAndFastList extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                //
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const QuickFoodsScreen(),
+                  ),
+                );
               },
               child: const Text("View all"),
             )
